@@ -8,7 +8,7 @@
 }
 
 :root {
-  --primary: #3b00db;
+  --primary: #00b9e8;
 }
 
 body {
@@ -107,8 +107,8 @@ body {
     width: 15rem;
     padding: 0.5rem 1.1rem;
     position: absolute;
-    top: 42%;
-    left: 42%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     background: #fff;
     border-radius: 0.8rem;
