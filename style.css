@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan&family=Poppins:wght@400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #3b00db;
+}
+
+body {
+  background: var(--primary);
+}
+
+.container {
+  width: 25rem;
+  padding: 1.5rem 2.1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border-radius: 0.8rem;
+}
+
+.container p {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.container input {
+  width: 100%;
+  height: 3.5rem;
+  border: 1px solid var(--primary);
+  outline: 0;
+  padding: 0.8rem;
+  margin: 0.8rem 0 1.25rem;
+  border-radius: 0.25rem;
+}
+
+.container button {
+  width: 100%;
+  height: 3.5rem;
+  background: var(--primary);
+  color: #fff;
+  border: 0;
+  outline: 0;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.8rem 0.8rem rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  margin: 1.25rem 0;
+  font-weight: 500;
+}
+
+#imgBox {
+  width: 15rem;
+  border-radius: 0.25rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: maxheight 0.1s;
+}
+
+#imgBox img {
+  width: 100%;
+  padding: 0.8rem;
+}
+
+#imgBox.show-img {
+  max-height: 300px;
+  margin: 0.8rem auto;
+  border: 1px solid #d1d1d1;
+}
+
+.error {
+  animation: shake 0.1s linear 10;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+    border-color: red 1px;
+  }
+  25% {
+    transform: translateX(-2px);
+    border-color: red;
+  }
+  50% {
+    transform: translateX(0);
+    border-color: red;
+  }
+  75% {
+    transform: translateX(2px);
+    border-color: red;
+  }
+  100% {
+    transform: translateX(0);
+    border-color: red;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 15rem;
+    padding: 0.5rem 1.1rem;
+    position: absolute;
+    top: 42%;
+    left: 42%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 0.8rem;
+  }
+
+  #imgBox {
+    width: 10rem;
+    border-radius: 0.25rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: maxheight 0.1s;
+  }
+}
